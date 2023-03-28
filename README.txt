@@ -1,4 +1,26 @@
-1. Isi file excel "link yang mau discrape.csv" dengan link dari GON. Taruh link secara menurun.
+This code is made by chatgpt 3 using python.
+
+What you need:
+- Windows PC
+- Python installed in PC
+- Python library:
+    - Selenium
+    - BeautifulSoup
+    - shutil
+    - subprocess
+    - openpyxl
+    - pandas
+    - (In case I forget to mention, please see the error at your terminal and install the library by your self ;-) )
+    
+===================================
+
+How to use the script:
+
+1. Fill the 'link yang mau discrape.csv' with product link from gudangonlinenibras.com (example: https://gudangonlinenibras.com/products/14105-itu-white-series-j).
+
+2. Run the code by double click "MULAI SCRAPING.bat". Wait until the process done
+
+
 
 2. Buka file "MULAI SCRAPING.bat" dan proses akan berjalan. Tunggu sampai muncul tulisan:
 
