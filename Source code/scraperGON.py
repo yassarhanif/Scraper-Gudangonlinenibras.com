@@ -3,7 +3,6 @@ import requests
 from bs4 import BeautifulSoup, Comment
 import csv
 import re
-from lxml import html
 import shutil
 import subprocess
 
@@ -109,48 +108,6 @@ for link in links:
                 with open(folder_name + '/ukuran.txt', 'w') as f:
                     f.write('\n'.join(sorted_sizes))
 
-        '''        
-        # Ambil harga
-        # membuat objek lxml untuk parsing halaman web
-        tree = html.fromstring(page.content)
-
-        # mencari elemen dengan XPath tertentu dan mengambil elemennya
-        element = tree.xpath('//*[@id="item-control"]/form/div[2]/comment()[2]')[0]
-
-        # menghapus karakter <!-- dan -->
-        element_text = element.text.strip()
-        element_text = element_text.replace('<!--', '').replace('-->', '')
-
-        # membuat objek lxml untuk parsing teks HTML yang telah diubah
-        element_tree = html.fromstring(element_text)
-
-        # mencari elemen select di dalam element_tree
-        select_element = element_tree.xpath('//select')[0]
-
-        # membuat daftar harga untuk ditulis ke dalam file
-        harga_list = []
-        for option in select_element.xpath('.//option'):
-            harga_list.append(option.text + ', ' + option.get('data-var-price'))
-        
-        if len(harga_list) == len(color_options) * len(sorted_sizes):
-            # membuka file harga.txt untuk ditulis
-            with open(folder_name + '/harga.txt', 'w') as f:
-                f.write('\n'.join(harga_list))
-                        
-            # Menyalin file size warna gambar harga.py ke folder yang sama dengan file warna.txt
-            shutil.copy('sizewarnagambarharga.py', folder_name)
-                
-        else:
-            print(folder_name + ' mengeksekui seleniumharga.py')
-            shutil.copy('sizewarnagambarharga.py', folder_name)
-            shutil.copy('seleniumharga.py', os.path.join(os.getcwd(), folder_name))
-            
-            # Simpan link produk ke dalam file txt
-            with open(folder_name + '/linkproduk.txt', 'w') as f:
-                f.write(link)
-            
-            subprocess.run(["python", "seleniumharga.py"], cwd=folder_name)
-        '''
         # membuat harga.txt dengan selenium       
         print(folder_name + ' mengeksekui seleniumharga.py')
         shutil.copy('sizewarnagambarharga.py', folder_name)
