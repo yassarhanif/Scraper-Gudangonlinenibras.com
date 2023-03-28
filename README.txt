@@ -29,6 +29,9 @@ How to use the script:
 
 5. Once you sorted the image, press enter in the terminal.
 
-6. After the code finish running, you can see "hasil.xlsx" in main folder. This file contain description, size, color, variation, headline, image link url, etc. Basically stuff you need for mass upload to marketplace like Shopee, Tiktok shop, Lazada, etc. You just need to adjust the column based on each marketplace preference.
+6. After the code finish running, this message will appear in the terminal
+"Proses penggabungan sudah selesai. Cari file hasil.xlsx"
+
+7. You can see "hasil.xlsx" in main folder. This file contain description, size, color, variation, headline, image link url, etc. Basically stuff you need for mass upload to marketplace like Shopee, Tiktok shop, Lazada, etc. You just need to adjust the column based on each marketplace preference.
 
 Thats all. Enjoy!
