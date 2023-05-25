@@ -2,6 +2,7 @@ This code is made by chatgpt 3 using python.
 
 What you need:
 - Windows PC
+- Google Chrome
 - Python installed in PC
 - Python library:
     - Selenium
